@@ -15,7 +15,7 @@ class Sidebar extends React.Component{
             <div>
                 {
                 	this.state.areas.map(function(item){
-	                	return <div className="sidebar-btn"><pre>{_this.dealWordsToVertical(item)}</pre></div>
+	                	return <div className="sidebar-btn {this.props.className}"><pre>{_this.dealWordsToVertical(item)}</pre></div>
 	                })
 	            }
             </div>
