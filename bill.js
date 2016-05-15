@@ -94,6 +94,7 @@
 					_createClass(MyApp, [{
 									key: 'componentDidMount',
 									value: function componentDidMount() {
+													console.log("MyApp componentDidMount");
 													var billList = [{
 																	"cid": 77,
 																	"oid": 284,
@@ -190,11 +191,11 @@
 					}, {
 									key: 'dealBillListDataSource',
 									value: function dealBillListDataSource(data) {
-													var cards = {};
+													var cards = [];
 													for (var i = 0; i < data.length; i++) {
 																	var record = data[i];
 																	if (!cards[record.cate_name]) {
-																					cards[record.cate_name] = {};
+																					cards[record.cate_name] = [];
 																	}
 																	if (!cards[record.cate_name][record.product_name + "_" + record.product_id]) {
 																					cards[record.cate_name][record.product_name + "_" + record.product_id] = [];
@@ -207,6 +208,7 @@
 					}, {
 									key: 'render',
 									value: function render() {
+													console.log("MyApp render");
 													return _react2.default.createElement(
 																	'div',
 																	null,
@@ -214,12 +216,12 @@
 																	_react2.default.createElement(
 																					'div',
 																					{ id: 'sidebar-wrap' },
-																					_react2.default.createElement(_sidebar2.default, { className: 'col-xxs-2' })
+																					_react2.default.createElement(_sidebar2.default, { ds: this.state.billList, className: 'col-xxs-2' })
 																	),
 																	_react2.default.createElement(
 																					'div',
 																					{ id: 'main-content-wrap' },
-																					_react2.default.createElement(_billlist2.default, { className: 'col-xxs-10' })
+																					_react2.default.createElement(_billlist2.default, { ds1: this.state.billList, className: 'col-xxs-10' })
 																	)
 													);
 									}
@@ -20810,13 +20812,26 @@
 	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(BillList).call(this, props));
 
 	        _this.displayName = 'BillList';
+	        console.log("BillList");
+	        _this.ds = !_this.props.ds1 ? [] : _this.props.ds1;
 	        return _this;
 	    }
 
 	    _createClass(BillList, [{
 	        key: 'render',
 	        value: function render() {
-	            return _react2.default.createElement(CateTable, null);
+	            var ds = !this.props.ds1 ? [] : this.props.ds1;
+	            console.log("BillList render");
+	            var cateTables = [];
+	            for (var key in ds) {
+	                cateTables.push(_react2.default.createElement(CateTable, { title: key, tableDs: ds[key] }));
+	            }
+
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                cateTables
+	            );
 	        }
 	    }]);
 
@@ -20838,73 +20853,21 @@
 	    _createClass(CateTable, [{
 	        key: 'render',
 	        value: function render() {
+	            console.log("CateTable render");
+	            var ds = !this.props.tableDs ? [] : this.props.tableDs;
+	            var tableLists = [];
+	            for (var key in ds) {
+	                tableLists.push(_react2.default.createElement(TableList, { cardTitle: key, listDs: ds[key] }));
+	            }
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'cate_wrap 雪峰测试 ' },
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'category title' },
-	                    '雪峰测试'
+	                    this.props.title
 	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { 'data-pid': '566', className: 'card' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'card-title' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'caret-wrapper' },
-	                            _react2.default.createElement('i', { className: 'fa fa-caret-right card-btn' })
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'product' },
-	                            _react2.default.createElement(
-	                                'span',
-	                                null,
-	                                '商品：'
-	                            ),
-	                            _react2.default.createElement(
-	                                'span',
-	                                { className: 'name product_name' },
-	                                'logo'
-	                            ),
-	                            ' ×',
-	                            _react2.default.createElement(
-	                                'span',
-	                                { className: 'total-quantity' },
-	                                ' 2'
-	                            ),
-	                            ' '
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'all-status ignore' },
-	                            _react2.default.createElement(
-	                                'span',
-	                                null,
-	                                '买到:'
-	                            ),
-	                            _react2.default.createElement('i', { className: 'fa fa-square-o' })
-	                        )
-	                    ),
-	                    _react2.default.createElement(TableList, null),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'extra-row' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 't-col-5 product-detail', 'data-pid': '566' },
-	                            '【商品详情】'
-	                        ),
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 't-col-5 order-add' },
-	                            _react2.default.createElement('input', { className: 'order-add-btn', 'data-cate': '雪峰测试', type: 'button', value: '加单' })
-	                        )
-	                    )
-	                )
+	                tableLists
 	            );
 	        }
 	    }]);
@@ -20929,37 +20892,95 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'table' },
+	                { 'data-pid': '566', className: 'card' },
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 't-row t-row-over-1 t-row-header' },
+	                    { className: 'card-title' },
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 't-col t-col-2' },
-	                        '买家'
+	                        { className: 'caret-wrapper' },
+	                        _react2.default.createElement('i', { className: 'fa fa-caret-right card-btn' })
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 't-col t-col-2' },
-	                        '数量'
+	                        { className: 'product' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            null,
+	                            '商品：'
+	                        ),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'name product_name' },
+	                            'logo'
+	                        ),
+	                        ' ×',
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'total-quantity' },
+	                            ' 2'
+	                        ),
+	                        ' '
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 't-col t-col-4' },
-	                        '备注'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 't-col t-col-1' },
-	                        '状态'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 't-col t-col-1 extra' },
-	                        '操作'
+	                        { className: 'all-status ignore' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            null,
+	                            '买到:'
+	                        ),
+	                        _react2.default.createElement('i', { className: 'fa fa-square-o' })
 	                    )
 	                ),
-	                _react2.default.createElement(List, null)
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'table' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 't-row t-row-over-1 t-row-header' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 't-col t-col-2' },
+	                            '买家'
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 't-col t-col-2' },
+	                            '数量'
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 't-col t-col-4' },
+	                            '备注'
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 't-col t-col-1' },
+	                            '状态'
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 't-col t-col-1 extra' },
+	                            '操作'
+	                        )
+	                    ),
+	                    _react2.default.createElement(List, null),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'extra-row' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 't-col-5 product-detail', 'data-pid': '566' },
+	                            '【商品详情】'
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 't-col-5 order-add' },
+	                            _react2.default.createElement('input', { className: 'order-add-btn', 'data-cate': '雪峰测试', type: 'button', value: '加单' })
+	                        )
+	                    )
+	                )
 	            );
 	        }
 	    }]);

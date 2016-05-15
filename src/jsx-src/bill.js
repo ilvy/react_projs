@@ -14,6 +14,7 @@ class MyApp extends React.Component {
 	  };
 	}
 	componentDidMount(){
+		console.log("MyApp componentDidMount")
 		var billList = [
 					    {
 					        "cid": 77,
@@ -114,11 +115,11 @@ class MyApp extends React.Component {
         this.setState({billList:this.dealBillListDataSource(billList)});
 	}
 	dealBillListDataSource(data){
-		var cards = {};
+		var cards = [];
         for (var i = 0; i < data.length; i++) {
             var record = data[i];
             if (!cards[record.cate_name]) {
-                cards[record.cate_name] = {};
+                cards[record.cate_name] = [];
             }
             if (!cards[record.cate_name][record.product_name + "_" + record.product_id]) {
                 cards[record.cate_name][record.product_name + "_" + record.product_id] = [];
@@ -129,11 +130,12 @@ class MyApp extends React.Component {
         return cards;
 	}
     render () {
+    	console.log("MyApp render");
         return (
               <div>
                 <div id="toolbar-wrap"></div>
-				<div id="sidebar-wrap"><Sidebar ds=this.state.billList className="col-xxs-2"/></div>
-				<div id="main-content-wrap"><BillList ds=this.state.billList className="col-xxs-10"/></div>
+				<div id="sidebar-wrap"><Sidebar ds={this.state.billList} className="col-xxs-2"/></div>
+				<div id="main-content-wrap"><BillList ds1={this.state.billList} className="col-xxs-10"/></div>
               </div>
         	)
     }
