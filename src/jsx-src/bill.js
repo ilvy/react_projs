@@ -135,7 +135,7 @@ class MyApp extends React.Component {
               <div>
                 <div id="toolbar-wrap"></div>
 				<div id="sidebar-wrap"><Sidebar ds={this.state.billList} className="col-xxs-2"/></div>
-				<div id="main-content-wrap"><BillList ds1={this.state.billList} className="col-xxs-10"/></div>
+				<div id="main-content-wrap"><BillList ds={this.state.billList} className="col-xxs-10"/></div>
               </div>
         	)
     }

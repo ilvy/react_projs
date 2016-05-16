@@ -221,7 +221,7 @@
 																	_react2.default.createElement(
 																					'div',
 																					{ id: 'main-content-wrap' },
-																					_react2.default.createElement(_billlist2.default, { ds1: this.state.billList, className: 'col-xxs-10' })
+																					_react2.default.createElement(_billlist2.default, { ds: this.state.billList, className: 'col-xxs-10' })
 																	)
 													);
 									}
@@ -20813,14 +20813,14 @@
 
 	        _this.displayName = 'BillList';
 	        console.log("BillList");
-	        _this.ds = !_this.props.ds1 ? [] : _this.props.ds1;
+	        _this.ds = !_this.props.ds ? [] : _this.props.ds;
 	        return _this;
 	    }
 
 	    _createClass(BillList, [{
 	        key: 'render',
 	        value: function render() {
-	            var ds = !this.props.ds1 ? [] : this.props.ds1;
+	            var ds = !this.props.ds ? [] : this.props.ds;
 	            console.log("BillList render");
 	            var cateTables = [];
 	            for (var key in ds) {
@@ -20857,7 +20857,7 @@
 	            var ds = !this.props.tableDs ? [] : this.props.tableDs;
 	            var tableLists = [];
 	            for (var key in ds) {
-	                tableLists.push(_react2.default.createElement(TableList, { cardTitle: key, listDs: ds[key] }));
+	                tableLists.push(_react2.default.createElement(TableList, { cate: this.props.title, cardTitle: key, listDs: ds[key] }));
 	            }
 	            return _react2.default.createElement(
 	                'div',
@@ -20886,13 +20886,32 @@
 	        _this3.displayName = 'TableList';
 	        return _this3;
 	    }
+	    /**
+	     * 列表头部数据格式化
+	     * @return {[type]} [description]
+	     */
+
 
 	    _createClass(TableList, [{
+	        key: 'dealListDs',
+	        value: function dealListDs() {
+	            var listDs = this.props.listDs;
+	            this.totalQuantity = 0;
+	            for (var i = listDs.length - 1; i >= 0; i--) {
+	                this.totalQuantity += listDs[i].quantity;
+	            }
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
+	            var listDs = this.props.listDs;
+	            var cardTitles = this.props.cardTitle.split("_");
+	            var pid = cardTitles[1],
+	                productName = cardTitles[0];
+	            var lists = [];
 	            return _react2.default.createElement(
 	                'div',
-	                { 'data-pid': '566', className: 'card' },
+	                { 'data-pid': pid, className: 'card' },
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'card-title' },
@@ -20912,13 +20931,14 @@
 	                        _react2.default.createElement(
 	                            'span',
 	                            { className: 'name product_name' },
-	                            'logo'
+	                            productName
 	                        ),
 	                        ' ×',
 	                        _react2.default.createElement(
 	                            'span',
 	                            { className: 'total-quantity' },
-	                            ' 2'
+	                            ' ',
+	                            this.totalQuantity
 	                        ),
 	                        ' '
 	                    ),
@@ -20965,19 +20985,21 @@
 	                            '操作'
 	                        )
 	                    ),
-	                    _react2.default.createElement(List, null),
+	                    listDs.map(function (item) {
+	                        return _react2.default.createElement(List, { record: item });
+	                    }),
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'extra-row' },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 't-col-5 product-detail', 'data-pid': '566' },
+	                            { className: 't-col-5 product-detail', 'data-pid': pid },
 	                            '【商品详情】'
 	                        ),
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: 't-col-5 order-add' },
-	                            _react2.default.createElement('input', { className: 'order-add-btn', 'data-cate': '雪峰测试', type: 'button', value: '加单' })
+	                            _react2.default.createElement('input', { className: 'order-add-btn', 'data-cate': this.props.cate, type: 'button', value: '加单' })
 	                        )
 	                    )
 	                )
@@ -21003,13 +21025,14 @@
 	    _createClass(List, [{
 	        key: 'render',
 	        value: function render() {
+	            var record = this.props.record;
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 't-row t-row-over-1', 'data-oid': '4700', 'data-cid': '77' },
+	                { className: 't-row t-row-over-1', 'data-oid': record.oid, 'data-cid': record.cid },
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 't-col t-col-2 nickname cnickname', 'data-type': '1', 'data-value': 'Niklaus' },
-	                    'Niklaus'
+	                    { className: 't-col t-col-2 nickname cnickname', 'data-type': '1', 'data-value': record.nickname },
+	                    record.nickname
 	                ),
 	                _react2.default.createElement(
 	                    'div',
@@ -21021,6 +21044,11 @@
 	                            'option',
 	                            { value: '0' },
 	                            '0'
+	                        ),
+	                        _react2.default.createElement(
+	                            'option',
+	                            { value: '0' },
+	                            '1'
 	                        )
 	                    )
 	                ),
