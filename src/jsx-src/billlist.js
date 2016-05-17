@@ -36,6 +36,7 @@ class CateTable extends React.Component {
         var tableLists = [];
         for(var key in ds){
             tableLists.push(<TableList cate={this.props.title} cardTitle={key} listDs={ds[key]} />);
+            console.log(ds[key]);
         }
         return (
             <div className="cate_wrap 雪峰测试 ">
@@ -55,18 +56,17 @@ class TableList extends React.Component {
         super(props);
         this.displayName = 'TableList';
     }
-    /**
-     * 列表头部数据格式化
-     * @return {[type]} [description]
-     */
     dealListDs(){
         var listDs = this.props.listDs;
         this.totalQuantity = 0;
         for (var i = listDs.length - 1; i >= 0; i--) {
             this.totalQuantity += listDs[i].quantity;
         }
+        // console.log(this.totalQuantity);
     }
     render() {
+        this.dealListDs();
+        console.log("tableList render")
         var listDs = this.props.listDs;
         var cardTitles = this.props.cardTitle.split("_");
         var pid = cardTitles[1],
@@ -76,7 +76,7 @@ class TableList extends React.Component {
             <div data-pid={pid} className="card">
                     <div className="card-title">
                         <div className="caret-wrapper"><i className="fa fa-caret-right card-btn"></i></div>
-                        <div className="product"><span>商品：</span><span className="name product_name">{productName}</span> ×<span className="total-quantity"> {this.totalQuantity}</span> </div>
+                        <div className="product"><span className="total-quantity"> {this.totalQuantity}</span> ×<span className="name product_name">{productName}</span> </div>
                         <div className="all-status ignore"><span>买到:</span><i className="fa fa-square-o"></i></div>
                     </div>
                 <div className="table">
