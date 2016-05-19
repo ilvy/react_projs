@@ -76,8 +76,10 @@ class TableList extends React.Component {
             <div data-pid={pid} className="card">
                     <div className="card-title">
                         <div className="caret-wrapper"><i className="fa fa-caret-right card-btn"></i></div>
-                        <div className="product"><span className="total-quantity"> {this.totalQuantity}</span> ×<span className="name product_name">{productName}</span> </div>
-                        <div className="all-status ignore"><span>买到:</span><i className="fa fa-square-o"></i></div>
+                        <div className="product">
+                            <span className="total-quantity"> {this.totalQuantity}</span> ×<span className="name product_name">{productName}</span> 
+                            <a className="all-status ignore"><i className="fa fa-square-o"></i></a>
+                        </div>
                     </div>
                 <div className="table">
     	            <div className="t-row t-row-over-1 t-row-header">
