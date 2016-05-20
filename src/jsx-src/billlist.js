@@ -79,6 +79,7 @@ class TableList extends React.Component {
                         <div className="product">
                             <span className="total-quantity"> {this.totalQuantity}</span> ×<span className="name product_name">{productName}</span> 
                             <a className="all-status ignore"><i className="fa fa-square-o"></i></a>
+                            <a className="product-detail">详情</a>
                         </div>
                     </div>
                 <div className="table">
