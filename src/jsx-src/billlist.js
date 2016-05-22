@@ -39,7 +39,7 @@ class CateTable extends React.Component {
             console.log(ds[key]);
         }
         return (
-            <div className="cate_wrap 雪峰测试 ">
+            <div className="cate_wrap " id={this.props.title} ref={this.props.title}>
 			    <div className="category title">{this.props.title}</div>
                 {
                     tableLists

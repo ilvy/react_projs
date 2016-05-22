@@ -11,11 +11,16 @@ class Sidebar extends React.Component{
 	}
 	render(){
 		var _this = this;
+		var ds = !this.props.ds ? [] : this.props.ds;
+        var areas = [];
+        for(var key in ds){
+            areas.push(key);
+        }
         return (
             <div>
                 {
-                	this.state.areas.map(function(item){
-	                	return <div ><pre>{_this.dealWordsToVertical(item)}</pre></div>
+                	areas.map(function(item){
+	                	return <div className="sidebar-btn" onClick={_this.props.onClick.bind(_this,_this)}><pre>{_this.dealWordsToVertical(item)}</pre></div>
 	                })
 	            }
             </div>

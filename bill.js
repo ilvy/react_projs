@@ -190,51 +190,6 @@
 																	"discount": 1,
 																	"cate_id": 1,
 																	"cate_name": "default"
-													}];
-													this.setState({ billList: this.dealBillListDataSource(billList) });
-													var _this = this;
-													setTimeout(function () {}, 5000);
-									}
-					}, {
-									key: 'handlerTest',
-									value: function handlerTest(context, event) {
-													var _this = context;
-													var billList = [{
-																	"cid": 77,
-																	"oid": 284,
-																	"product_id": 473,
-																	"product_name": "iphone6 6288hkd",
-																	"nickname": "Niklaus",
-																	"quantity": 11,
-																	"status": 2,
-																	"remark": null,
-																	"unit_cost": 900,
-																	"unit_price": null,
-																	"mail_free": 0,
-																	"mail_pay": 0,
-																	"room_id": "666666",
-																	"exchange_rate": 0.8,
-																	"discount": 1,
-																	"cate_id": 1,
-																	"cate_name": "default"
-													}, {
-																	"cid": 10,
-																	"oid": 406,
-																	"product_id": 474,
-																	"product_name": "浪琴手表 17000",
-																	"nickname": "雪峰",
-																	"quantity": 2,
-																	"status": 2,
-																	"remark": null,
-																	"unit_cost": null,
-																	"unit_price": 1,
-																	"mail_free": 0,
-																	"mail_pay": 0,
-																	"room_id": "666666",
-																	"exchange_rate": 0.84,
-																	"discount": 1,
-																	"cate_id": 1,
-																	"cate_name": "default"
 													}, {
 																	"cid": 77,
 																	"oid": 152,
@@ -252,7 +207,7 @@
 																	"exchange_rate": 0.8,
 																	"discount": null,
 																	"cate_id": 1,
-																	"cate_name": "default"
+																	"cate_name": "default2"
 													}, {
 																	"cid": 109,
 																	"oid": 403,
@@ -270,10 +225,405 @@
 																	"exchange_rate": 0.84,
 																	"discount": 1,
 																	"cate_id": 1,
+																	"cate_name": "default2"
+													}, {
+																	"cid": 10,
+																	"oid": 406,
+																	"product_id": 474,
+																	"product_name": "浪琴手表 17000",
+																	"nickname": "雪峰",
+																	"quantity": 2,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": null,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.84,
+																	"discount": 1,
+																	"cate_id": 1,
+																	"cate_name": "default3"
+													}, {
+																	"cid": 77,
+																	"oid": 152,
+																	"product_id": 474,
+																	"product_name": "浪琴手表 17000",
+																	"nickname": "Niklaus",
+																	"quantity": 4,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": 1000,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.8,
+																	"discount": null,
+																	"cate_id": 1,
 																	"cate_name": "default"
+													}, {
+																	"cid": 109,
+																	"oid": 405,
+																	"product_id": 474,
+																	"product_name": "浪琴手表 17000",
+																	"nickname": "Hello！远征",
+																	"quantity": 6,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": null,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.84,
+																	"discount": 1,
+																	"cate_id": 1,
+																	"cate_name": "default3"
+													}, {
+																	"cid": 109,
+																	"oid": 403,
+																	"product_id": 559,
+																	"product_name": "面霜",
+																	"nickname": "Hello！远征",
+																	"quantity": 1,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": null,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.84,
+																	"discount": 1,
+																	"cate_id": 1,
+																	"cate_name": "default3"
+													}, {
+																	"cid": 77,
+																	"oid": 152,
+																	"product_id": 474,
+																	"product_name": "浪琴手表 17000",
+																	"nickname": "Niklaus",
+																	"quantity": 4,
+																	"status": 2,
+																	"remark": "ahhahah",
+																	"unit_cost": 100,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.8,
+																	"discount": null,
+																	"cate_id": 1,
+																	"cate_name": "default3"
+													}, {
+																	"cid": 109,
+																	"oid": 403,
+																	"product_id": 559,
+																	"product_name": "面霜",
+																	"nickname": "Hello！远征",
+																	"quantity": 1,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": null,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.84,
+																	"discount": 1,
+																	"cate_id": 1,
+																	"cate_name": "default3"
+													}, {
+																	"cid": 10,
+																	"oid": 406,
+																	"product_id": 474,
+																	"product_name": "浪琴手表 17000",
+																	"nickname": "雪峰",
+																	"quantity": 2,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": null,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.84,
+																	"discount": 1,
+																	"cate_id": 1,
+																	"cate_name": "default6"
+													}, {
+																	"cid": 77,
+																	"oid": 152,
+																	"product_id": 474,
+																	"product_name": "浪琴手表 17000",
+																	"nickname": "Niklaus",
+																	"quantity": 4,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": 1000,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.8,
+																	"discount": null,
+																	"cate_id": 1,
+																	"cate_name": "default6"
+													}, {
+																	"cid": 109,
+																	"oid": 405,
+																	"product_id": 474,
+																	"product_name": "浪琴手表 17000",
+																	"nickname": "Hello！远征",
+																	"quantity": 6,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": null,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.84,
+																	"discount": 1,
+																	"cate_id": 1,
+																	"cate_name": "default6"
+													}, {
+																	"cid": 109,
+																	"oid": 403,
+																	"product_id": 559,
+																	"product_name": "面霜",
+																	"nickname": "Hello！远征",
+																	"quantity": 1,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": null,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.84,
+																	"discount": 1,
+																	"cate_id": 1,
+																	"cate_name": "default6"
+													}, {
+																	"cid": 77,
+																	"oid": 152,
+																	"product_id": 474,
+																	"product_name": "浪琴手表 17000",
+																	"nickname": "Niklaus",
+																	"quantity": 4,
+																	"status": 2,
+																	"remark": "ahhahah",
+																	"unit_cost": 100,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.8,
+																	"discount": null,
+																	"cate_id": 1,
+																	"cate_name": "default6"
+													}, {
+																	"cid": 109,
+																	"oid": 403,
+																	"product_id": 559,
+																	"product_name": "面霜",
+																	"nickname": "Hello！远征",
+																	"quantity": 1,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": null,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.84,
+																	"discount": 1,
+																	"cate_id": 1,
+																	"cate_name": "default6"
+													}, {
+																	"cid": 10,
+																	"oid": 406,
+																	"product_id": 474,
+																	"product_name": "浪琴手表 17000",
+																	"nickname": "雪峰",
+																	"quantity": 2,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": null,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.84,
+																	"discount": 1,
+																	"cate_id": 1,
+																	"cate_name": "default66"
+													}, {
+																	"cid": 77,
+																	"oid": 152,
+																	"product_id": 474,
+																	"product_name": "浪琴手表 17000",
+																	"nickname": "Niklaus",
+																	"quantity": 4,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": 1000,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.8,
+																	"discount": null,
+																	"cate_id": 1,
+																	"cate_name": "default66"
+													}, {
+																	"cid": 109,
+																	"oid": 405,
+																	"product_id": 474,
+																	"product_name": "浪琴手表 17000",
+																	"nickname": "Hello！远征",
+																	"quantity": 6,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": null,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.84,
+																	"discount": 1,
+																	"cate_id": 1,
+																	"cate_name": "default66"
+													}, {
+																	"cid": 109,
+																	"oid": 403,
+																	"product_id": 559,
+																	"product_name": "面霜",
+																	"nickname": "Hello！远征",
+																	"quantity": 1,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": null,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.84,
+																	"discount": 1,
+																	"cate_id": 1,
+																	"cate_name": "default66"
+													}, {
+																	"cid": 77,
+																	"oid": 152,
+																	"product_id": 474,
+																	"product_name": "浪琴手表 17000",
+																	"nickname": "Niklaus",
+																	"quantity": 4,
+																	"status": 2,
+																	"remark": "ahhahah",
+																	"unit_cost": 100,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.8,
+																	"discount": null,
+																	"cate_id": 1,
+																	"cate_name": "default26"
+													}, {
+																	"cid": 109,
+																	"oid": 403,
+																	"product_id": 559,
+																	"product_name": "面霜",
+																	"nickname": "Hello！远征",
+																	"quantity": 1,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": null,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.84,
+																	"discount": 1,
+																	"cate_id": 1,
+																	"cate_name": "default26"
+													}, {
+																	"cid": 109,
+																	"oid": 403,
+																	"product_id": 559,
+																	"product_name": "面霜",
+																	"nickname": "Hello！远征",
+																	"quantity": 1,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": null,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.84,
+																	"discount": 1,
+																	"cate_id": 1,
+																	"cate_name": "default68"
+													}, {
+																	"cid": 77,
+																	"oid": 152,
+																	"product_id": 474,
+																	"product_name": "浪琴手表 17000",
+																	"nickname": "Niklaus",
+																	"quantity": 4,
+																	"status": 2,
+																	"remark": "ahhahah",
+																	"unit_cost": 100,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.8,
+																	"discount": null,
+																	"cate_id": 1,
+																	"cate_name": "default36"
+													}, {
+																	"cid": 109,
+																	"oid": 403,
+																	"product_id": 559,
+																	"product_name": "面霜",
+																	"nickname": "Hello！远征",
+																	"quantity": 1,
+																	"status": 2,
+																	"remark": null,
+																	"unit_cost": null,
+																	"unit_price": null,
+																	"mail_free": 0,
+																	"mail_pay": 0,
+																	"room_id": "666666",
+																	"exchange_rate": 0.84,
+																	"discount": 1,
+																	"cate_id": 1,
+																	"cate_name": "default56"
 													}];
-													_this.setState({ billList: _this.dealBillListDataSource(billList) });
-													console.log("handlerTest");
+													this.setState({ billList: this.dealBillListDataSource(billList) });
+													var _this = this;
+													setTimeout(function () {}, 5000);
+									}
+					}, {
+									key: 'handlerTest',
+									value: function handlerTest(context, event) {
+													var _this = context;
+													var currBtn = event.currentTarget;
+													event.currentTarget.className = [event.currentTarget.className, 'sidebar-cur-btn'].join(' ');
+													var allSbBtns = currBtn.parentNode.children;
+													for (var i = 0; i < allSbBtns.length; i++) {
+																	if (allSbBtns[i] != currBtn) {
+																					allSbBtns[i].className = 'sidebar-btn';
+																	}
+													}
+													var btnContent = currBtn.innerText.replace(/\s/g, '');
+													var cateArea = _this.refs[btnContent];
+													document.body.scrollTop = document.getElementById(btnContent).offsetTop;
 									}
 					}, {
 									key: 'dealBillListDataSource',
@@ -302,12 +652,12 @@
 																	_react2.default.createElement('div', { id: 'toolbar-wrap' }),
 																	_react2.default.createElement(
 																					'div',
-																					{ id: 'sidebar-wrap', className: 'col-xxs-1 no-lpadding no-rpadding', onClick: this.handlerTest.bind(this, this) },
-																					_react2.default.createElement(_sidebar2.default, { ds: this.state.billList, className: 'col-xxs-1' })
+																					{ id: 'sidebar-wrap', className: 'col-xxs-1 no-lpadding no-rpadding' },
+																					_react2.default.createElement(_sidebar2.default, { ds: this.state.billList, onClick: this.handlerTest, className: 'col-xxs-1' })
 																	),
 																	_react2.default.createElement(
 																					'div',
-																					{ id: 'main-content-wrap', className: 'col-xxs-11 no-lpadding no-rpadding' },
+																					{ id: 'main-content-wrap', className: 'col-xxs-11 col-xxs-offset-1 no-lpadding no-rpadding' },
 																					_react2.default.createElement(_billlist2.default, { ds: this.state.billList, className: 'col-xxs-11' })
 																	)
 													);
@@ -20490,13 +20840,18 @@
 			key: 'render',
 			value: function render() {
 				var _this = this;
+				var ds = !this.props.ds ? [] : this.props.ds;
+				var areas = [];
+				for (var key in ds) {
+					areas.push(key);
+				}
 				return _react2.default.createElement(
 					'div',
 					null,
-					this.state.areas.map(function (item) {
+					areas.map(function (item) {
 						return _react2.default.createElement(
 							'div',
-							null,
+							{ className: 'sidebar-btn', onClick: _this.props.onClick.bind(_this, _this) },
 							_react2.default.createElement(
 								'pre',
 								null,
@@ -20554,7 +20909,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n}\n.no-lpadding {\n  padding-left: 0 !important;\n}\n.no-rpadding {\n  padding-right: 0 !important;\n}\n#sidebar-wrap {\n  background-color: #f88109;\n  color: #190000;\n}\n.category.title {\n  background-color: #c7c7c7;\n  text-align: center;\n  padding: 3px;\n}\n.caret-wrapper {\n  display: none;\n}\n.card-title {\n  padding: 5px 20px;\n}\n.card-title .product a.all-status {\n  float: right;\n  margin-left: 10px;\n}\n.card-title .product a.product-detail {\n  float: right;\n  font-size: 10px;\n}\n.cate_wrap .table {\n  display: none;\n}\n.t-row {\n  width: 100%;\n  float: left;\n  /*-webkit-transition: all 1s;-moz-transition: all 1s;-ms-transition: all 1s;-o-transition: all 1s;transition: all 1s;*/\n}\n.t-row {\n  border-bottom: 1px solid #cdcdcd;\n}\n.t-row:first-child {\n  border-top: 1px solid #cdcdcd;\n}\n.t-row:last-child {\n  border-bottom: 1px solid #cdcdcd;\n}\n.t-row-over-1 {\n  width: 111%;\n}\n.t-row-over-2 {\n  width: 125%;\n}\n.t-row-over-3 {\n  width: 142.8%;\n}\n.t-col {\n  display: inline-block;\n  border-right: 1px solid #cdcdcd;\n  text-align: center;\n  float: left;\n  padding-top: 6px;\n  padding-bottom: 0;\n  overflow: hidden;\n  height: 32px;\n  /*padding-left: 2px;*/\n  /*padding-right: 2px;*/\n}\n.input-div {\n  padding: 1px 0 1px 0;\n}\n.t-col input[type='text'] {\n  width: 100%;\n  height: 90%;\n  border: none;\n  background-color: rgba(0, 0, 0, 0);\n}\n.t-row .t-col:last-child {\n  border-right: transparent;\n}\n.t-col-1 {\n  width: 10%;\n  float: left;\n}\n.t-col-2 {\n  width: 20%;\n  float: left;\n}\n.t-col-3 {\n  width: 30%;\n  float: left;\n}\n.t-col-4 {\n  width: 40%;\n  float: left;\n}\n.t-col-5 {\n  width: 50%;\n  float: left;\n}\n.t-col-6 {\n  width: 60%;\n  float: left;\n}\n.t-col-9 {\n  width: 90%;\n  float: left;\n}\n.t-col-10 {\n  width: 100%;\n  float: left;\n}\n@media all and (max-width: 560px) {\n  .t-col-xs-1 {\n    width: 10%;\n    float: left;\n  }\n  .t-col-xs-2 {\n    width: 20%;\n    float: left;\n  }\n  .t-col-xs-3 {\n    width: 30%;\n    float: left;\n  }\n  .t-col-xs-4 {\n    width: 40%;\n    float: left;\n  }\n  .t-col-xs-5 {\n    width: 50%;\n    float: left;\n  }\n  .t-col-xs-6 {\n    width: 60%;\n    float: left;\n  }\n  .t-col-xs-7 {\n    width: 70%;\n    float: left;\n  }\n  .t-col-xs-8 {\n    width: 80%;\n    float: left;\n  }\n  .t-col-xs-9 {\n    width: 90%;\n    float: left;\n  }\n  .t-col-xs-10 {\n    width: 100%;\n    float: left;\n  }\n}\n@media all and (max-width: 360px) {\n  .t-col-xxs-1 {\n    width: 10%;\n    float: left;\n  }\n  .t-col-xxs-2 {\n    width: 20%;\n    float: left;\n  }\n  .t-col-xxs-3 {\n    width: 30%;\n    float: left;\n  }\n  .t-col-xxs-4 {\n    width: 40%;\n    float: left;\n  }\n  .t-col-xxs-5 {\n    width: 50%;\n    float: left;\n  }\n  .t-col-xxs-6 {\n    width: 60%;\n    float: left;\n  }\n  .t-col-xxs-7 {\n    width: 70%;\n    float: left;\n  }\n  .t-col-xxs-8 {\n    width: 80%;\n    float: left;\n  }\n  .t-col-xxs-9 {\n    width: 90%;\n    float: left;\n  }\n  .t-col-xxs-10 {\n    width: 100%;\n    float: left;\n  }\n}\n", ""]);
+	exports.push([module.id, "body {\n  padding: 0;\n  margin: 0;\n}\n.no-lpadding {\n  padding-left: 0 !important;\n}\n.no-rpadding {\n  padding-right: 0 !important;\n}\n#sidebar-wrap {\n  color: #190000;\n  position: fixed;\n  z-index: 10;\n  overflow: auto;\n  max-height: 636px;\n}\n#sidebar-wrap .sidebar-btn {\n  background-color: #f88109;\n  padding: 12px 0;\n  text-align: center;\n}\n#sidebar-wrap .sidebar-btn pre {\n  margin: 0;\n  line-height: 73%;\n  overflow: hidden;\n}\n#sidebar-wrap .sidebar-btn.sidebar-cur-btn {\n  background-color: #fff;\n}\n.category.title {\n  background-color: #c7c7c7;\n  text-align: center;\n  padding: 3px;\n  float: left;\n  width: 100%;\n}\n.caret-wrapper {\n  display: none;\n}\n.card-title {\n  padding: 5px 20px;\n}\n.card-title .product a.all-status {\n  float: right;\n  margin-left: 10px;\n}\n.card-title .product a.product-detail {\n  float: right;\n  font-size: 10px;\n}\n#main-content-wrap {\n  overflow-y: auto;\n}\n.cate_wrap {\n  clear: both;\n}\n.cate_wrap .card {\n  border-bottom: 1px #f2f2f2 solid;\n}\n.cate_wrap .card .table {\n  float: left;\n  width: 100%;\n}\n.t-row {\n  width: 100%;\n  float: left;\n  /*-webkit-transition: all 1s;-moz-transition: all 1s;-ms-transition: all 1s;-o-transition: all 1s;transition: all 1s;*/\n}\n.t-row {\n  border-bottom: 1px solid #cdcdcd;\n}\n.t-row:first-child {\n  border-top: 1px solid #cdcdcd;\n}\n.t-row:last-child {\n  border-bottom: 1px solid #cdcdcd;\n}\n.t-row-over-1 {\n  width: 111%;\n}\n.t-row-over-2 {\n  width: 125%;\n}\n.t-row-over-3 {\n  width: 142.8%;\n}\n.t-col {\n  display: inline-block;\n  border-right: 1px solid #cdcdcd;\n  text-align: center;\n  float: left;\n  padding-top: 6px;\n  padding-bottom: 0;\n  overflow: hidden;\n  height: 32px;\n  /*padding-left: 2px;*/\n  /*padding-right: 2px;*/\n}\n.input-div {\n  padding: 1px 0 1px 0;\n}\n.t-col input[type='text'] {\n  width: 100%;\n  height: 90%;\n  border: none;\n  background-color: rgba(0, 0, 0, 0);\n}\n.t-row .t-col:last-child {\n  border-right: transparent;\n}\n.t-col-1 {\n  width: 10%;\n  float: left;\n}\n.t-col-2 {\n  width: 20%;\n  float: left;\n}\n.t-col-3 {\n  width: 30%;\n  float: left;\n}\n.t-col-4 {\n  width: 40%;\n  float: left;\n}\n.t-col-5 {\n  width: 50%;\n  float: left;\n}\n.t-col-6 {\n  width: 60%;\n  float: left;\n}\n.t-col-9 {\n  width: 90%;\n  float: left;\n}\n.t-col-10 {\n  width: 100%;\n  float: left;\n}\n@media all and (max-width: 560px) {\n  .t-col-xs-1 {\n    width: 10%;\n    float: left;\n  }\n  .t-col-xs-2 {\n    width: 20%;\n    float: left;\n  }\n  .t-col-xs-3 {\n    width: 30%;\n    float: left;\n  }\n  .t-col-xs-4 {\n    width: 40%;\n    float: left;\n  }\n  .t-col-xs-5 {\n    width: 50%;\n    float: left;\n  }\n  .t-col-xs-6 {\n    width: 60%;\n    float: left;\n  }\n  .t-col-xs-7 {\n    width: 70%;\n    float: left;\n  }\n  .t-col-xs-8 {\n    width: 80%;\n    float: left;\n  }\n  .t-col-xs-9 {\n    width: 90%;\n    float: left;\n  }\n  .t-col-xs-10 {\n    width: 100%;\n    float: left;\n  }\n}\n@media all and (max-width: 360px) {\n  .t-col-xxs-1 {\n    width: 10%;\n    float: left;\n  }\n  .t-col-xxs-2 {\n    width: 20%;\n    float: left;\n  }\n  .t-col-xxs-3 {\n    width: 30%;\n    float: left;\n  }\n  .t-col-xxs-4 {\n    width: 40%;\n    float: left;\n  }\n  .t-col-xxs-5 {\n    width: 50%;\n    float: left;\n  }\n  .t-col-xxs-6 {\n    width: 60%;\n    float: left;\n  }\n  .t-col-xxs-7 {\n    width: 70%;\n    float: left;\n  }\n  .t-col-xxs-8 {\n    width: 80%;\n    float: left;\n  }\n  .t-col-xxs-9 {\n    width: 90%;\n    float: left;\n  }\n  .t-col-xxs-10 {\n    width: 100%;\n    float: left;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -20989,7 +21344,7 @@
 	            }
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'cate_wrap 雪峰测试 ' },
+	                { className: 'cate_wrap ', id: this.props.title, ref: this.props.title },
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'category title' },

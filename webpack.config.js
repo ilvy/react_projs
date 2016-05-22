@@ -23,7 +23,7 @@ module.exports = {
     new BrowserSyncPlugin({
       // browse to http://localhost:3000/ during development, 
       // ./public directory is being served 
-      host: 'localhost',
+      host: '192.168.1.103',
       port: 3000,
       server: { baseDir: ['./'] }
     })

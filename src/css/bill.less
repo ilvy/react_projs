@@ -1,3 +1,5 @@
+@sidebarWidth:40px;
+
 body{
 	padding: 0;
 	margin: 0;
@@ -9,14 +11,32 @@ body{
 	padding-right: 0 !important;
 }
 #sidebar-wrap{
-	background-color: #f88109;
 	color: #190000;
+    position: fixed;
+    z-index: 10;
+    overflow:auto;
+        max-height: 636px;
+    .sidebar-btn{
+        background-color: #f88109;
+        padding: 12px 0;
+        text-align: center;
+        pre{
+            margin:0;
+            line-height: 73%;
+            overflow: hidden;
+        }
+    }
+    .sidebar-btn.sidebar-cur-btn{
+        background-color: #fff;
+    }
 }
 
 .category.title{
 	background-color: #c7c7c7;
 	text-align: center;
 	padding: 3px;
+    float:left;
+    width:100%;
 }
 .caret-wrapper{
 	display: none;
@@ -36,10 +56,20 @@ body{
 		}
 	}
 }
+#main-content-wrap{
+    overflow-y: auto;
+}
 .cate_wrap{
-	.table{
-		display: none;
-	}
+    clear: both;
+    .card{
+        border-bottom:1px #f2f2f2 solid;
+        .table{
+            //display: none;
+            float:left;
+            width:100%;
+        }
+    }
+	
 }
 
 .t-row{
